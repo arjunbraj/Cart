@@ -8,7 +8,7 @@ const Navbar = (props) => {
                     alt="cart-icon"
                     style={styles.cartIcon}
                 />
-                <span style={styles.cartCount}>3</span>
+                <span style={styles.cartCount}> {props.count} </span>
             </div>
         </div>
     );
