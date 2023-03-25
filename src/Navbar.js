@@ -3,6 +3,7 @@ import React from "react";
 const Navbar = (props) => {
     return (
         <div style={styles.nav}>
+            <div style={{color: 'white', position: 'absolute', left: 20, textTransform: 'uppercase', fontSize: 20}}><b>cart</b></div>
             <div style={styles.cartIconContainer}>
                 <img src="https://cdn-icons-png.flaticon.com/512/711/711897.png"
                     alt="cart-icon"
