@@ -137,23 +137,23 @@ class App extends React.Component {
     return tot;
   }
 
-  addProduct = () => {
-    firebase
-     .firestore()
-     .collection('products')
-     .add({
-      img: '',
-      qty: 1,
-      price: 9999,
-      title: 'Washing Machine'
-     })
-     .then((docRef) => {
-      console.log('Product added successfully', docRef);
-     })
-     .catch((err) => {
-      console.log(err);
-     })
-  }
+  // addProduct = () => {
+  //   firebase
+  //    .firestore()
+  //    .collection('products')
+  //    .add({
+  //     img: 'https://www.ifbappliances.com/media/catalog/product/cache/f6d60de4095a6e5204f81c04aa5b766f/t/l/tl_s4ins_12kg_top_load_fv300.png',
+  //     qty: 1,
+  //     price: 9999,
+  //     title: 'Washing Machine'
+  //    })
+  //    .then((docRef) => {
+  //     console.log('Product added successfully', docRef);
+  //    })
+  //    .catch((err) => {
+  //     console.log(err);
+  //    })
+  // }
 
   render() {
     const {products, loading} = this.state;
@@ -162,7 +162,7 @@ class App extends React.Component {
         <Navbar 
           count={this.getCartCount()}
         />
-        <button onClick={this.addProduct} style={{padding: 20, fontSize: 20}}>Add a Product (Washing Machine)</button>
+        {/* <button onClick={this.addProduct} style={{padding: 20, fontSize: 20}}>Add a Product (Washing Machine)</button> */}
         <Cart 
           products={products}
           onIncreaseQuantity={this.handleIncreaseQuantity} 
